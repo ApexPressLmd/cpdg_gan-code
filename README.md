@@ -3,13 +3,6 @@
 **Controllable, Physically-Consistent, Downstream-Guided GAN** for renewable
 scenario synthesis and downstream load-forecasting augmentation.
 
-This repository is a faithful, *un-simplified* PyTorch reproduction of the
-method described in the source paper outline. Every atom of the architecture
-and both core innovations are implemented as specified — including the exact
-equations and the two appendix algorithms — rather than approximated. The
-paper's reported numbers are explicitly illustrative placeholders; this code
-reproduces the **method and experimental protocol**, not those specific
-figures.
 
 ---
 
