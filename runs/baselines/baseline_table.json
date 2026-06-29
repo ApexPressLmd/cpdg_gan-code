@@ -1,0 +1,34 @@
+{
+  "WGAN-GP": {
+    "ES": 2.7755191326141357,
+    "MMD": 0.03856396675109863,
+    "Tail_ES": 3.027631998062134,
+    "feasibility_rate": 1.0,
+    "CRPS_reduction_overall": 5.263676506134408,
+    "CRPS_reduction_hard": 12.234940242942379
+  },
+  "TS-Diffusion": {
+    "ES": 2.1566953659057617,
+    "MMD": 0.03070533275604248,
+    "Tail_ES": 2.3415355682373047,
+    "feasibility_rate": 0.0,
+    "CRPS_reduction_overall": 4.597893207346478,
+    "CRPS_reduction_hard": 11.88047053321001
+  },
+  "Fusion (no Delta)": {
+    "ES": 2.229264736175537,
+    "MMD": 0.06035637855529785,
+    "Tail_ES": 2.6586616039276123,
+    "feasibility_rate": 1.0,
+    "CRPS_reduction_overall": 5.694398200343735,
+    "CRPS_reduction_hard": 11.192767147835694
+  },
+  "CPDG-GAN (Ours)": {
+    "ES": 3.41542387008667,
+    "MMD": 0.0,
+    "Tail_ES": 3.6842923164367676,
+    "feasibility_rate": 1.0,
+    "CRPS_reduction_overall": 3.540778051345223,
+    "CRPS_reduction_hard": 12.082407332293107
+  }
+}

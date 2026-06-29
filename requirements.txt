@@ -1,0 +1,14 @@
+# CPDG-GAN — runtime dependencies
+#
+# Tested with Python 3.12 on CPU. The code is device-agnostic; install the
+# CUDA build of torch instead of the CPU wheel below to train on GPU.
+#
+# CPU-only torch wheel:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+torch>=2.2
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+pyyaml>=6.0
+matplotlib>=3.7

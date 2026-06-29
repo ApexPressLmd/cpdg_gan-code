@@ -1,0 +1,73 @@
+data:
+  dataset: synthetic_wind
+  root: ./data
+  horizon: 24
+  n_channels: 4
+  n_meteo: 8
+  split:
+  - 0.7
+  - 0.15
+  - 0.15
+  n_clusters: 6
+  n_samples: 4096
+  normalize: per_channel_minmax
+model:
+  d_z: 32
+  d_cint: 4
+  attn_dim: 128
+  attn_heads: 4
+  attn_depth: 3
+  ff_mult: 2
+  dropout: 0.0
+  cond_embed_dim: 64
+  spectral_norm_mi: true
+physics:
+  ramp_max: 0.3
+  capacity: 1.05
+  nonneg: true
+  reduce: mean_time
+structural:
+  patch_len: 4
+  mask_ratio: 0.3
+  w_recon: 1.0
+  w_acf: 0.5
+  w_trend: 0.5
+  acf_lags: 6
+train:
+  epochs: 250
+  batch_size: 64
+  lr_g: 0.0002
+  lr_d: 0.0002
+  betas:
+  - 0.5
+  - 0.9
+  n_critic: 5
+  gp_lambda: 10.0
+  lambda_reg: 1.0
+  lambda_mi: 0.1
+  lambda_orth: 0.1
+  vae_beta: 1.0
+  use_resampling: true
+  K: 10
+  tau: 0.5
+  resample_ema: 0.5
+  resample_floor: 0.02
+  resample_synth_per_cluster: 256
+  use_physics_gate: true
+  gate_cov_ema: 0.99
+  log_every: 10
+  eval_every: 25
+  grad_clip: 0.0
+eval:
+  n_scenarios: 64
+  mmd_bandwidths:
+  - 0.5
+  - 1.0
+  - 2.0
+  - 5.0
+  tail_quantile: 0.95
+  feasibility_tol: 0.0001
+  forecaster_epochs: 60
+seed: 0
+device: cpu
+out_dir: ./runs/default
